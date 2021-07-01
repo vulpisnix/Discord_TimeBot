@@ -12,6 +12,6 @@ public class BotReadyEvent extends ListenerAdapter {
         super.onReady(event);
         System.out.println("[Bot] Bot is ready.");
 
-        Bot.getJDA().getPresence().setStatus(OnlineStatus.ONLINE);
+        event.getJDA().getPresence().setStatus(OnlineStatus.ONLINE);
     }
 }

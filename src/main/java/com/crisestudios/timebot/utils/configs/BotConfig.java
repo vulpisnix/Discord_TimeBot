@@ -11,14 +11,20 @@ public class BotConfig {
     public String botToken;
 
     @Expose
+    public String commandPrefix;
+
+    @Expose
     public List<Long> botCommanderRoles;
 
-    public BotConfig(String botToken, List<Long> botCommanderRoles) {
+    public BotConfig(String botToken, String commandPrefix, List<Long> botCommanderRoles) {
         this.botToken = botToken;
+        this.commandPrefix = commandPrefix;
         this.botCommanderRoles = botCommanderRoles;
     }
+
     public BotConfig() {
         this.botToken = "";
+        this.commandPrefix = "t!";
         this.botCommanderRoles = new ArrayList<>();
     }
 }
